@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 import { crudApi } from 'src/app/home/crudapi'
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -8,7 +9,7 @@ import { crudApi } from 'src/app/home/crudapi'
 })
 export class HomePage implements OnInit {
   listMovie: any;
-  constructor(private crudapi: crudApi,public router: Router,) {}
+  constructor(private crudapi: crudApi,public router: Router,public navCtrl: NavController) {}
   ngOnInit() {
     this.crudapi.readAllmovie().subscribe(
       data=>{
@@ -36,5 +37,9 @@ export class HomePage implements OnInit {
   updateItem(item){
     let dataProduct = JSON.stringify(item);   
     this.router.navigate(["edit-info", dataProduct]);
+  }
+  
+  createitem(){
+    this.navCtrl.navigateRoot("create");
   }
 }

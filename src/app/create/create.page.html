@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>create</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+
+<ion-item>
+  <ion-input placeholder="image" [(ngModel)]="getImage"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input placeholder="title" [(ngModel)]="gettitle"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-textarea rows="6" placeholder="description" [(ngModel)]="getDescription"></ion-textarea>
+</ion-item>
+<ion-item>
+  <ion-input placeholder="rating" [(ngModel)]="getrating"></ion-input>
+</ion-item>
+<ion-item>
+  <ion-input placeholder="time" [(ngModel)]="gettime"></ion-input>
+</ion-item>
+
+<ion-button shape="round" color="success" expand="full" (click)="addMovie()">
+  <ion-icon name="add-circle-outline"></ion-icon>ADD</ion-button>
+
+  
