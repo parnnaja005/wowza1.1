@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>edit-info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+</ion-content>
+
+<ion-card-content>
+  <ion-item>
+    <ion-input placeholder="image" [(ngModel)]="getImage"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="title" [(ngModel)]="gettitle"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea rows="6" placeholder="description" [(ngModel)]="getDescription"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="rating" [(ngModel)]="getrating"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="time" [(ngModel)]="gettime"></ion-input>
+  </ion-item>
+
+  
+  <ion-button expand="block" (click)="updateProduct()">edit</ion-button>
+  <ion-button expand="block" color="medium" (click)="back()">back</ion-button>
+</ion-card-content>
